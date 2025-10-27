@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MailGuard - Spam Email Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>📧 MailGuard</h1>
+        <p>Spam Email Detection using DistilBERT</p>
+
+        <textarea id="emailInput" placeholder="Paste your email content here..."></textarea>
+        <button id="predictBtn">Predict</button>
+
+        <div id="resultBox" class="hidden">
+            <h2>Result:</h2>
+            <p id="predictionLabel"></p>
+            <p id="predictionConfidence"></p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
